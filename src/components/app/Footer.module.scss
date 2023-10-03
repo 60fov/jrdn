@@ -1,0 +1,10 @@
+.base {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-end;
+
+  [data-quote] {
+    letter-spacing: 0;
+    color: var(--text-color-alt);
+  }
+}

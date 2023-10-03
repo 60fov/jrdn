@@ -1,0 +1,25 @@
+.base {
+  --spacing: var(--spacing-md);
+  --radius: var(--radius-md);
+
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+
+  padding: var(--spacing);
+  border-radius: var(--radius);
+  margin-left: calc(-var(--spacing));
+
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: -0.035em;
+
+  line-height: 1;
+
+  &:hover {
+    background: var(--accent-1);
+    text-decoration: underline;
+  }
+
+  transition: background 100ms linear;
+}

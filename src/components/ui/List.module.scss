@@ -1,0 +1,13 @@
+.base {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  &[data-orientation=row] {
+    flex-direction: row;
+  }
+
+  // >*:nth-child(n+2) {
+  //   border-top: 0.5px solid var(--accent-1);
+  // }
+}

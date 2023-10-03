@@ -1,0 +1,20 @@
+.base {
+  --bg-size: 200%;
+  --bg-start: var(--foreground);
+  --bg-end: var(--fukagawa-grey);
+  --bg-angle: 60deg;
+  background: linear-gradient(var(--bg-angle),
+      var(--bg-start),
+      var(--bg-end),
+      var(--bg-start)) 0 0 / var(--bg-size) 100%;
+  background-clip: text;
+  color: transparent;
+  animation: movebg 4s infinite var(--ease-in-out-quint) alternate;
+  display: inline-block;
+}
+
+@keyframes movebg {
+  to {
+    background-position: var(--bg-size) 0;
+  }
+}

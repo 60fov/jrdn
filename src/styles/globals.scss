@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #E0E0E0;
+  --deep-black: #16160e;
+  --shiny-crows-feather: #000b00;
+  --deep-purple: #2e2930;
+  --sewer-rat: #595455;
+  --indigo-grey: #6c848d;
+  --sunset: #D1A86B;
+  --crimson: #9D382C;
+  --white-plum-grey: #e5e4e6;
+  --light-plum-grey: #dcd6d9;
+  --plum-grey: #c099a0;
+  --wisteria-grey: #a6a5c4;
+  --rust-grey: #47585c;
+  --moisture: #c8c2be;
+  --crow: #180614;
+  --fukagawa-grey: #97a791;
+  --dark-indigo: #474a4d;
+  --light-black: #a3a3a2;
+
+  --light-grey-cloud: #d4dcda;
+  --willow-grey: #c8d5bb;
+  --minato-grey: #80989b;
+
+  --spacing-base: 2px;
+  --spacing-xs: calc(var(--spacing-base)*1);
+  --spacing-sm: calc(var(--spacing-base)*2);
+  --spacing-md: calc(var(--spacing-base)*4);
+  --spacing-lg: calc(var(--spacing-base)*8);
+
+  --radius-base: 2px;
+  --radius-xs: calc(var(--radius-base)*1);
+  --radius-sm: calc(var(--radius-base)*2);
+  --radius-md: calc(var(--radius-base)*4);
+  --radius-lg: calc(var(--radius-base)*8);
+
+  --ease-in-out-quint: cubic-bezier(0.83, 0, 0.17, 1);
+
+  --foreground: var(--deep-purple);
+  --background: var(--moisture);
+  --accent-1: #b7b1ae;
+  --accent-2: #a6a19f;
+  --accent-3: #969090;
+  --accent-4: #868081;
+  --accent-5: #767173;
+  --accent-6: #676264;
+  --accent-7: #585357;
+  --accent-8: #494449;
+  --accent-9: #3b363c;
+
+  --font-serif: 'Newsreader', 'Times New Roman', Times, serif;
+  --font-sans: 'Inter', Helvetica, Arial, sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', Courier, monospace;
+
+  --text-color: var(--accent-8);
+  --text-color-alt: var(--accent-5);
+
+  --background-start: var(--background);
+  --background-end: var(--foreground);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: var(--paper);
+    --background: var(--deep-purple);
+    --accent-1: #3d393f;
+    --accent-2: #4d494f;
+    --accent-3: #5e5a60;
+    --accent-4: #6f6c71;
+    --accent-5: #817e82;
+    --accent-6: #939194;
+    --accent-7: #a6a4a6;
+    --accent-8: #b9b8b9;
+    --accent-9: #cccccc;
+  }
+}
+
+// TODO light and dark
+@media (prefers-contrast: more) {}
+
+body {
+  position: relative;
+  color: var(--foreground);
+  background: var(--background);
+  min-height: 100vh;
+
+  font-feature-settings: "ss01", "ss02", "ss03", "calt";
+  
+  // letter-spacing: 0.025em;
+  ::selection {
+    background: var(--accent-7);
+    color: var(--background);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Newsreader', 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 1.125em;
+  // font-weight: 800;
+  color: var(--text-color-alt);
+
+  letter-spacing: -0.01em;
+}
+
+p {
+  // font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  // letter-spacing: 0.025em;
+}
+
+em {
+  font-family: var(--font-serif);
+}
+
+hr {
+  border-color: var(--accent-1);
+}

@@ -1,0 +1,10 @@
+.base {
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: var(--radius-xs);
+  background: var(--accent-1);
+  color: var(--accent-6);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  line-height: 1;
+  letter-spacing: normal;
+}

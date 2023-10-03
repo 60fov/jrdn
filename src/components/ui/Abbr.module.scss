@@ -1,0 +1,32 @@
+.base {
+  position: relative;
+  text-decoration: none;
+
+  &:active {
+    [data-tip] {
+      visibility: visible;
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  [data-text] {
+    cursor: help;
+    border-bottom: 1px dotted var(--accent-1);
+  }
+
+  [data-tip] {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    white-space: nowrap;
+    background: var(--accent-1);
+    border-radius: var(--radius-sm);
+    padding: var(--spacing-md);
+    font-size: 0.75em;
+    transform: translateY(2px);
+    opacity: 0;
+    transition: all 150ms ease-in;
+  }
+}

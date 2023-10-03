@@ -1,0 +1,36 @@
+.navlink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  isolation: isolate;
+
+  transition: all 100ms ease-in;
+
+  padding: var(--spacing-sm) 0;
+  color: var(--accent-7);
+
+  border-bottom: 0.5px solid var(--accent-2);
+
+  overflow: hidden;
+
+  &:hover {
+    color: var(--foreground);
+    border-bottom: 0.5px solid var(--accent-4);
+  }
+
+  &:hover::after {
+    transform: translateY(10px);
+  }
+
+  &::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    transform: translateY(20px);
+    background: radial-gradient(50% 50% at var(--x, 50%) 100%, var(--accent-3), transparent);
+    transition: all 250ms ease-out;
+  }
+}
